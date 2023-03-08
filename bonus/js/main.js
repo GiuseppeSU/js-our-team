@@ -21,21 +21,22 @@ const esperti = [
 ] 
 
 for (let key in esperti){
-    console.log(esperti[key].nome , esperti[key].posizione , esperti[key].foto)
-    let espertiDom = document.getElementById('esperti');
-    espertiDom.innerHTML += `${esperti[key].nome } ${esperti[key].posizione }<br />`;
-    creaImg(esperti[key].foto);
+    let testo = esperti[key].nome + ' ' + esperti[key].congnome + ' ' + esperti[key].posizione;
+    creaCard(esperti[key].foto ,testo);
+
 }
 
-
-
-function creaImg (foto){
-    
-    
-    let immaginiDom = document.createElement('img')
-    immaginiDom.src = 'img/' + foto;
-    let src = document.getElementById('img-container');
-    src.appendChild(immaginiDom);
+function creaCard (img , testo){
+   let card= document.createElement('div');
+   card.classList.add('card');
+   let imgCard = document.createElement('img');
+   imgCard.src = 'img/' + img;
+   let paragrafo = document.createElement('p');
+   paragrafo.innerHTML = testo;
+   card.append(imgCard);
+   card.append(paragrafo);
+   let container = document.getElementById('container');
+   container.appendChild(card);
 }
 
 
