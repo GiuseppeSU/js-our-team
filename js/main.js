@@ -22,7 +22,6 @@ const esperti = [
 
 for (let key in esperti){
     console.log(esperti[key].nome , esperti[key].posizione , esperti[key].foto)
-    
     let espertiDom = document.getElementById('esperti');
     espertiDom.innerHTML += `${esperti[key].nome } ${esperti[key].posizione } ${esperti[key].foto }<br />`;
 }
