@@ -1,21 +1,30 @@
 const esperti = [
     {
-        'nome': 'Wayne', 'congnome' : 'Barnett', 'posizione' : 'Founder & CEO'
+        'nome': 'Wayne', 'congnome' : 'Barnett', 'posizione' : 'Founder & CEO', 'foto' : 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        'nome': 'Angela', 'congnome' : 'Caroll', 'posizione' : 'Chief Editor'
+        'nome': 'Angela', 'congnome' : 'Caroll', 'posizione' : 'Chief Editor', 'foto' : 'angela-caroll-chief-editor.jpg'
     },
     {
-        'nome': 'Walter', 'congnome' : 'Gordon', 'posizione' : 'Office Manager'
+        'nome': 'Walter', 'congnome' : 'Gordon', 'posizione' : 'Office Manager', 'foto' : 'walter-gordon-office-manager.jpg'
     },
     {
-        'nome': 'Angela', 'congnome' : 'Lopez', 'posizione' : 'Social Media Manager'
+        'nome': 'Angela', 'congnome' : 'Lopez', 'posizione' : 'Social Media Manager', 'foto' : 'angela-lopez-social-media-manager.jpg'
     },
     {
-        'nome': 'Scott', 'congnome' : 'Estrada', 'posizione' : 'Developer'
+        'nome': 'Scott', 'congnome' : 'Estrada', 'posizione' : 'Developer', 'foto' : 'scott-estrada-developer.jpg'
     },
 
     {
-        'nome': 'Barbara', 'congnome' : 'Ramos', 'posizione' : 'Graphic Designer'
+        'nome': 'Barbara', 'congnome' : 'Ramos', 'posizione' : 'Graphic Designer', 'foto' : 'barbara-ramos-graphic-designer.jpg'
     },
-]
+] 
+
+for (let key in esperti){
+    console.log(esperti[key].nome , esperti[key].posizione , esperti[key].foto)
+    
+    let espertiDom = document.getElementById('esperti');
+    espertiDom.innerHTML += `${esperti[key].nome } ${esperti[key].posizione } ${esperti[key].foto }<br />`;
+}
+
+
